@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EJAF.UI02
 {
-    public class CheckOutPage
+    class BasketPage
     {
     }
 }

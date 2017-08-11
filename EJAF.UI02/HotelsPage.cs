@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EJAF.UI02
 {
-    class HotelsPage
+    public class HotelsPage
     {
     }
 }

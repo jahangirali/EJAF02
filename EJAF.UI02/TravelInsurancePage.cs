@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace EJAF.UI02
 {
-    class TravelInsurancePage
+    public class TravelInsurancePage
     {
+
+
     }
 }

@@ -35,5 +35,10 @@ namespace EJAF.UI02
             OneWayCheckBox.Click();
         }
 
+        public void ClickShowFlightsButton()
+        {
+            SearchFlight.Click();
+        }
+
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace EJAF.UI02
 {
@@ -13,7 +14,8 @@ namespace EJAF.UI02
         public IWebDriver Driver { get; set; }
 
         [OneTimeSetUp]
-
+        
+        
 
 
         [OneTimeTearDown]

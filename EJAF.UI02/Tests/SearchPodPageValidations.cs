@@ -32,7 +32,7 @@ namespace EJAF.UI02.Tests
         [TearDown]
         public void OneTimeTearDown()
         {
-            Driver?.Quit();
+            //Driver?.Quit();
         }
 
     }

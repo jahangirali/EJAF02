@@ -18,17 +18,19 @@ namespace EJAF.UI02.Tests
         {
             Driver = new ChromeDriver();
             Driver.Navigate().GoToUrl("http://www.easyjet.com");
+            
         }
         
 
         [Test]
         public void NoDepartureAirport()
         {
-            
+            var searchPodPage = new SearchPodPage(Driver);
 
+            searchPodPage.ClickOneWayCheckBox();
 
-        
         }
+
         [TearDown]
         public void OneTimeTearDown()
         {

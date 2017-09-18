@@ -18,6 +18,8 @@ namespace EJAF.UI02
             Driver = driver;
         }
 
+        //[FindsBy(How = How.Id, Using = "close-drawer-link")] private IWebElement CloseCookiePolicy;
+        
         [FindsBy(How = How.CssSelector, Using = "label[for='one-way'] span[class='checkbox-label-text']")] private IWebElement OneWayCheckBox;
         [FindsBy(How = How.ClassName, Using = "origin")] private IWebElement FromAirport;
         [FindsBy(How = How.ClassName, Using = "destination")] private IWebElement ToAirport;
@@ -28,8 +30,7 @@ namespace EJAF.UI02
         [FindsBy(How = How.CssSelector, Using = "input[name='Children']")] private IWebElement NoOfChildren;
         [FindsBy(How = How.CssSelector, Using = "input[id^='Infants']")] private IWebElement NoOfInfants;
 
-
-
+        
         public void ClickOneWayCheckBox()
         {
             OneWayCheckBox.Click();

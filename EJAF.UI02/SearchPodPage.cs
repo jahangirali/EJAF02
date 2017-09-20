@@ -15,6 +15,7 @@ namespace EJAF.UI02
 
         public SearchPodPage(IWebDriver driver)
         {
+            PageFactory.InitElements(driver, this);
             Driver = driver;
         }
 

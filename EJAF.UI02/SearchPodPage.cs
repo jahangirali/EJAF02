@@ -56,6 +56,16 @@ namespace EJAF.UI02
             FromAirport.SendKeys("LTN"+Keys.Enter);            
         }
 
+        public void EnterTextToField()
+        {
+            FromAirport.Click();
+            FromAirport.SendKeys(Keys.Backspace);
+            FromAirport.SendKeys("LTN" + Keys.Enter);
+            ToAirport.SendKeys("AMS"+Keys.Enter + Keys.Tab);
+        }
+
+
+
 
     }
 }

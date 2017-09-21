@@ -27,7 +27,7 @@ namespace EJAF.UI02.Tests
         
 
         [Test]
-        public void AssertIsOneWayCheckBoxTicked()
+        public void SearchPodIsOneWayCheckBoxTicked()
         {
             var searchPodPage = new SearchPodPage(Driver);
 
@@ -38,7 +38,13 @@ namespace EJAF.UI02.Tests
         }
 
         [Test]
-        public void 
+        public void SearchPodShowFlights()
+        {
+            var searchPodPage = new SearchPodPage(Driver);
+            searchPodPage.ClickOneWayCheckBox();
+            searchPodPage.EnterTextToField();
+            searchPodPage.ClickShowFlightsButton();
+        }
 
         [TearDown]
         public void OneTimeTearDown()

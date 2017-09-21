@@ -10,7 +10,7 @@ namespace EJAF.UI02
 {
     public class LoginPage
     {
-
+        [FindsBy(How = How.CssSelector, Using = "class[ng-click='DoSignInClick()']")] private IWebElement SignIn;
         [FindsBy(How = How.CssSelector, Using = "button[id='close-drawer-link']")] private IWebElement CloseButton;
         [FindsBy(How = How.CssSelector, Using = "href[class='ej-link register-link']")] private IWebElement RegisterHereLink;
         [FindsBy(How = How.CssSelector, Using = "input[id='signin-username']")] private IWebElement EmailAddress;
@@ -18,8 +18,11 @@ namespace EJAF.UI02
         [FindsBy(How = How.CssSelector, Using = "input[id='signin-login']")] private IWebElement SignInButton;
         [FindsBy(How = How.CssSelector, Using = "input[id='']")] private IWebElement KeepMeSignedInCheckBox;
         [FindsBy(How = How.CssSelector, Using = "input[id='']")] private IWebElement ForgottenYourDetailsLink;
-        //[FindsBy(How = How.CssSelector, Using = "input[id^='Infants']")] private IWebElement NoOfInfants;
-
+       
+        public void EnterEmailAddress()
+        {
+            
+        }
         
     }
 }

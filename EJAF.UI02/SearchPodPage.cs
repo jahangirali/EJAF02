@@ -15,6 +15,8 @@ namespace EJAF.UI02
 
         public SearchPodPage(IWebDriver driver)
         {
+            // Create a new instance of the page class
+            // and initialise any WebElement fields in it.
             PageFactory.InitElements(driver, this);
             Driver = driver;
         }
@@ -37,10 +39,23 @@ namespace EJAF.UI02
             OneWayCheckBox.Click();
         }
 
+        public bool IsOneWayCheckBoxTicked()
+        {
+            return OneWayCheckBox.Enabled;
+        }
+
         public void ClickShowFlightsButton()
         {
             SearchFlight.Click();
         }
+
+        public void EnterTextFromField()
+        {
+            FromAirport.Click();
+            FromAirport.SendKeys(Keys.Backspace);
+            FromAirport.SendKeys("LTN"+Keys.Enter);            
+        }
+
 
     }
 }

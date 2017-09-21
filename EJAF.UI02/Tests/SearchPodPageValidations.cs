@@ -27,13 +27,18 @@ namespace EJAF.UI02.Tests
         
 
         [Test]
-        public void NoDepartureAirport()
+        public void AssertIsOneWayCheckBoxTicked()
         {
             var searchPodPage = new SearchPodPage(Driver);
 
             searchPodPage.ClickOneWayCheckBox();
+            searchPodPage.EnterTextFromField();
 
+            Assert.IsTrue(searchPodPage.IsOneWayCheckBoxTicked());
         }
+
+        [Test]
+        public void 
 
         [TearDown]
         public void OneTimeTearDown()

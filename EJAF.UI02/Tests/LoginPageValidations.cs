@@ -27,7 +27,16 @@ namespace EJAF.UI02.Tests
         [Test]
         public void LoginPageValidLogin()
         {
-            
+            var loginPage = new LoginPage(Driver);
+
+            loginPage.ClickSignIn();
+
+        }
+
+        [TearDown]
+        public void OneTimeTearDown()
+        {
+            //Driver.Quit();
         }
 
 

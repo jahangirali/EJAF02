@@ -15,6 +15,7 @@ namespace EJAF.UI02.Tests
     public class SearchPodPageValidations
     {
         private IWebDriver Driver { get; set; }
+
         [SetUp]
         public void Setup()
         {

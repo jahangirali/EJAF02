@@ -10,7 +10,17 @@ namespace EJAF.UI02
 {
     public class LoginPage
     {
-        [FindsBy(How = How.CssSelector, Using = "class[ng-click='DoSignInClick()']")] private IWebElement SignIn;
+        private IWebDriver Driver { get; set; }
+
+        private static readonly By PageSelector = By.Id("drawer-title-sign-in");
+
+        public LoginPage(IWebDriver driver)
+        {
+            PageFactory.InitElements(driver, this);
+            Driver = driver;
+        }
+
+        [FindsBy(How = How.CssSelector, Using = "span[class='sign-in']")] private IWebElement SignIn;
         [FindsBy(How = How.CssSelector, Using = "button[id='close-drawer-link']")] private IWebElement CloseButton;
         [FindsBy(How = How.CssSelector, Using = "href[class='ej-link register-link']")] private IWebElement RegisterHereLink;
         [FindsBy(How = How.CssSelector, Using = "input[id='signin-username']")] private IWebElement EmailAddress;
@@ -22,6 +32,13 @@ namespace EJAF.UI02
         public void EnterEmailAddress()
         {
             
+        }
+
+        public void ClickSignIn()
+        {
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
+            
+            SignIn.Click();
         }
         
     }
